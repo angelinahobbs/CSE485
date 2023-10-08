@@ -7,8 +7,33 @@ https://github.com/colinlaney/animal-tracking
 https://github.com/VioletteChiara/AnimalTA
 https://scikit-image.org/
 https://pytorch.org/vision/stable/index.html (Torch Vision)
-https://mmcv.readthedocs.io/en/latest/ (pytorch extension)
+https://mmcv.readthedocs.io/en/latest/ (PyTorch extension)
 https://keras.io/
 
 C/C++:
-https://opencv.org/ (Cross platform can use any languages)
+https://opencv.org/ (Cross-platform can use any language)
+
+
+Best options:
+
+TensorFlow
+Pros: 
+1. The most popular, meaning there is going to be large amounts of documentation.
+2. Keras is an API on top of TensorFlow that makes computer vision much easier.
+3. Has up to 1300 different pre-trained models.
+4. Generally preferred when it comes to production.
+5. May be easier to use when it comes to creating a UI because it is built around javascript.
+Cons: 1. Relatviley complex compared to other existing libraries.
+
+PyTorch
+Pros:
+1. Very popular, with lots of documentation.
+2. Very flexible when creating new model structures.
+3. Integrates well with other Python packages such as NumPy or others.
+4. Generally preferred when it comes to research.
+
+Cons:
+1. Has only 49 pre-trained models, much less than tensorflow.
+
+Final thoughts:
+Overall, in this case, I would choose PyTorch. It seems TensorFlow is becoming outdated, and the majority of custom research projects are now being done in Pytorch as well as an industry shift towards the PyTorch framework. I would only use Tensorflow with the Keras API on top of it, which may have a slightly easier learning curve than Pytorch, however in the long run PyTorch would likely serve the project much better for its highly customizable features. It is also much more community-driven, meaning there will likely be more resources and open-source libraries to support our development.
