@@ -1,0 +1,14 @@
+Javascript libraries:
+https://www.tensorflow.org/js
+
+Python Libraries:
+https://github.com/pyratlib/pyrat
+https://github.com/colinlaney/animal-tracking
+https://github.com/VioletteChiara/AnimalTA
+https://scikit-image.org/
+https://pytorch.org/vision/stable/index.html (Torch Vision)
+https://mmcv.readthedocs.io/en/latest/ (pytorch extension)
+https://keras.io/
+
+C/C++:
+https://opencv.org/ (Cross platform can use any languages)
