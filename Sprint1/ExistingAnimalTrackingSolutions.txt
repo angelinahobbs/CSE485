@@ -1,57 +1,20 @@
 1. EthoVision XT https://www.noldus.com/ethovision-xt/
 
-Desc: EthoVision XT is a commonly used video tracking software, designed to monitor and assess the behavior, motion, and activity of various animals.
-Provider: Noldus specializes in advanced solutions for the scientific study of behavior. They offer a range of software, hardware, and integrated systems to facilitate observational research and behavioral analysis.
-Technology: Uses a combination of contour-based and deep learning video tracking techniques to monitor animals via live video feed or just a video file. 
-Key Features: With features such as real-time tracking, advanced activity detection, and high-throughput capabilities, their software stands out as a superior choice in animal behavior analysis.
-UI: Uses an intuitive and user-friendly interface, allowing for seamless setup and configuration of experiments, data visualization, and analysis.
-Data Analysis: Offers tools for data analysis, including heat maps, trajectories, and statistics. It also allows report generation.
-Pros:
-- Advanced tracking
-- Real-time monitoring
-- Advanced data analysis
-- User friendly interface
-- Good scalability
-Cons: 
-- Price
-- Learning curve due to so many features
-- Hardware dependencies
+About: Ethovision XT is a video tracking software used to monitor the behavior and activity of different animals. It was developed by the company Noldus, a company that specializes in human and animal behavioral research. Ethovision XT uses contour-based tracking and deep learning tracking to track multiple body points on animals. By using two camera angles, Ethovision can combine them with Track3D to create a 3D tracking environment. Another thing that Ethovision does is detect animal activity by monitoring pixel changes from frame to frame which even works in low light environments.
+
+Idea to implement: 
+Deep learning tracking will be the most important thing to implement as I believe it is the best way to track and learn behavioral patterns of animals from video feed. 
 
 2. Furbo 360 Dog Camera https://furbo.com/us/
 
-Description: Furbo 360 is a pet monitoring solution equipped with a 360° rotating 1080p camera, interactive two-way audio, treat dispensing, and AI-driven dog behavior recognition technology.
-Provider: Furbo is a frontrunner in smart pet technology and are mainly known for their dog cameras.
-Technology: Employs advanced technology, notably its AI-enhanced dog recognition, to provide accurate pet tracking.
-Key Features:
-- 360° panoramic 1080p Full HD camera
-- Interactive two-way audio
-- Remote treat dispensing
-- AI-driven dog behavior recognition
-User Interface: An intuitive interface allows for remote pet monitoring which uses real-time video streaming, easy-to-use controls, and smart notifications to keep pet owners connected and informed.
-Data Analysis: Furbo's dynamic system progressively learns from a dog's behavior. Its recognition and analysis of behavior patterns refine the system's responsiveness, ensuring timely alerts about significant or uncommon pet activities.
-Pros:
-- Real-time monitoring
-- Two-way communication
-- Practical
-Cons:
-- Premium price point
-- Power Dependency
+About: The Furbo 360 Dog Camera is a pet monitoring device developed by Furbo, a company that specializes in smart pet technology. The product uses a 360° rotating HD camera to track the owner's pets motion. Not only does it do this but it uses two-way audio so that the user can communicate with their pet remotely. Furbo also has a product that comes with the camera called Furbo Nanny which gives real-time notifications. These notifications are based on the dogs mood which can be detected by their AI.
 
-3. Move Bank https://www.movebank.org/cms/movebank-main
+Idea to implement: 
+Being able to track animals with live footage should definitely be integrated into our project as it allows for many more situations it could be used in.
 
-Desc: Movebank is a global online platform dedicated to assisting researchers and wildlife professionals in managing, analyzing, and archiving intricate animal tracking and sensor data.
-Provider: Movebank is hosted by the Max Planck Institute of Animal Behavior which is a research institution dedicated to understanding the complexities of animal behavior.
-Technology: Utilizes a suite of technologies including mobile apps like the Animal Tagger and Animal Tracker for field data collection, R packages such as ctmm and move for sophisticated movement modeling and analysis, and specialized tools like the Douglas Argos Filter for enhancing location estimate accuracy.
-Key Features: Its Animal Tracker app offers advanced movement modeling and facilitates dynamic visualization of tracking data.
-UI: Offers an easy to use interface designed for easy data management, featuring a dashboard layout for quick overviews, integrated visualization tools for mapping animal movements, and seamless data import/export capabilities.
-Data Analysis: Employs advanced data analysis tools for sophisticated movement modeling and environmental data annotation to comprehensively track, model, and interpret animal movements and behaviors.
-Pros: 
-- Free
-- Comprehensive toolkit
-- Collaboration features
-- Real-time tracking
-Cons: 
-- Learning curve due to so many features
-- Dependence on external tools
-- Data privacy
+3. AI Pet Cam https://daleonai.com/ai-pet-cam
 
+About: The AI pet cam is an animal tracking camera app created by AI developer Dale Markowitz. It uses a TensorFlow machine learning model to monitor the pets behavior in order to find out when it does something such as jump on the couch. The app also uses firebase on the backend in order to store events/photos and send notifications using Slack API. All of this is combined with a simple and concise user interface which ties it all together.
+
+Idea to implement:
+Using a database such as firebase would be beneficial to store any data we need to about the animals.
