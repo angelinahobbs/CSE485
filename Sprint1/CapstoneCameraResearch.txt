@@ -1,0 +1,42 @@
+Camera Options for Object Tracking and Computer Vision
+
+
+1. Raspberry Pi Camera Module
+
+This camera is the smallest camera I have ever seen, and is capable of putting out 720p60 and 1080p30 with little power. When combined with a raspberry pi,
+this camera is capable of more than just object tracking, but the only downside is that it can be difficult to work with, since you need a RasPi. It's somewhat inexpensive,
+coming in at anywhere from 10-70 dollars depending on which one you get, as there are 4 different versions of them, each having different ups and downs like
+framerate/res differences or light sensitivity or even compatibility.
+
+2. Logitech C270/C920 Webcam
+
+In the OpenCV community, these cameras are regarded as some of the most commonly used for computer vision and object tracking because of their robustness 
+and its encoding hardware that is used that releases some of the stress from the computer vision hardware. These are both webcams for your PC at home, 
+so they are just USB 2.0 for the C270 and 3.0+ for the C920. Although the enconding isn't the selling point for this camera, its handy if you have no other 
+option, and both these cameras are prices fairly well with the C270 being less than $20 on Amazon and the C920 being 65 if we want to work with more HD
+or framerate, although not needed for this project as working with lower res would be easier.
+
+3. Arducam
+
+This is the probably the most customizable camera on the list, and it comes with greater price. The Arducam is a embedded vision product that works with both
+RasperryPi and Arduino boards, but also you can order one prebuilt with its own board with a USB 2.0 or 3.0. These can be ordered with a wide camera lens, for 
+expanded viewing, and also different customization for light/color sensitivity. These really can be customized for any project, and work really well according 
+to the CV community. Minimum resolution on all boards is 720p30, so perfect for this project and what we want to work with. Price point is very appealing,
+coming in at anywhere from 15-80$ depending on which you order.
+
+4. IPhone/Android Camera
+
+This camera is the only one that every one has. Difficult to work with as you need to understand the architecture of the system you are using before understanding
+how to operate the camera, but its free for us to use since everyone already has one. There are some limits with this because it has built in security and hardware 
+restrictions, and it can be difficult to work around. Although the options you can work with are basically endless because of the out-of-the-box design, these are 
+much harder to work with because of everything combined.
+
+Conclusion:
+
+Besides the Iphone/Android camera, I believe that the other 3 are really solid options for this project, but I think will take a little bit of discussion with the 
+entire group on what we should spend our money on. Because the field is so big and there are so many options, I could only really choose a select few that I think 
+could work for this project, but I guarentee that there are others that work just as well if not better for what we are trying to achieve. Since we are working with
+different animals and probably need some customizability, I think the Arducam is our best bet because it is relatively inexpensive and has a lot of customizability,
+which can be really helpful if we run into trouble along the way. But, a downside is that this camera isn't as heavily worked with compared to the RasPi or even 
+the C270/920, which are more researched and used for basic computer vision. I think our best bet is the Arduino for now, but depends on what platform, hardware, and
+software we want to use for this project.
