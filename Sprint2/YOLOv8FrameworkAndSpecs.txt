@@ -1,0 +1,102 @@
+This is general and not relative, but it provides a guide as to what we should use and operate with from here on out to test our software. Every thing provided below (especially the YOLOv8 models)
+is tested by people online, the original creators, or a tech website. It should give us a good idea with what to go with.
+
+For the Models, we will be creating our own but using the YOLOv8 libraries and Pytorch as our platform and assistance, so the data directly below is also just a concept for the rest of our project, 
+but will probably be something we will test along the way. What I am saying is this is data is given by another platform that is similar to what we will be creating, so it will give us an idea as to whaat
+will be best.
+
+For Camera Detection, This is what is currently supported by YOLOv8 for models trained on the COCO dataset(Common Objects in Context):
+
+Speeds are in ms
+Model	size	mAPval	SpeedCPU SpeedA	params FLOPs
+YOLOv8n	640	37.3	80.4	0.99	3.2	8.7
+YOLOv8s	640	44.9	128.4	1.20	11.2	28.6
+YOLOv8m	640	50.2	234.7	1.83	25.9	78.9
+YOLOv8l	640	52.9	375.2	2.39	43.7	165.2
+YOLOv8x	640	53.9	479.1	3.53	68.2	257.8
+
+For Camera Detection, This is what is currently supported by YOLOv8 for models trained on the Open Image V7 dataset (alternative to COCO):
+
+Speeds are in ms
+Model	size	mAPval	SpeedCPU SpeedA	params FLOPs
+YOLOv8n	640	18.4	142.4	1.21	3.5	10.5
+YOLOv8s	640	27.7	183.1	1.40	11.4	29.7
+YOLOv8m	640	33.6	408.5	2.26	26.2	80.6
+YOLOv8l	640	34.9	596.9	2.43	44.1	167.4
+YOLOv8x	640	36.3	860.6	3.56	68.7	260.6
+
+These are different cameras and their specifications(Please note that the Resolutions given by these cameras ARE adjustable):
+
+Raspberry Pi Camera Module V2:
+
+Resolution: 8 MP (3280 × 2464 pixels) or loweer
+Speed: typically around 100ms for shutter lag
+Parameters: Adjustable focus, expsoure, white balance, etc.
+
+Arduino Camera Modules (specifically OV7670):
+
+Resolution: VGA 2MP (640 × 480 pixels) or lower
+Speed: Depending on the model and settings, it can range from several milliseconds to a few seconds for capturing an image. This one operates at 33ms.
+Parameters: Limited settings, typically basic configurations like exposure and brightness
+
+iPhone 12 Camera:
+
+Rear Cameras:
+Wide: 12 MP
+Ultra Wide: 12 MP
+Front Camera: 12 MP
+Speed: typically well under 100ms for shutter lag
+Parameters: Extensive control over settings like ISO, shutter speed, aperture, etc.
+
+Logitech C920 HD Pro Webcam:
+
+Resolution: 1080p (2 MP)
+Speed: but it operates at 30 frames per second (fps), around 33.3 ms
+Parameters: Adjustable focus, exposure, white balance, etc.
+
+
+CPU and GPU support and specifications (these are some of our specifications, including example ones):
+
+CPUs:
+
+AMD Ryzen 5 3600(Lukes PC):
+
+Speed: 3.6 GHz base clock speed (up to 4.2 GHz with Precision Boost(not needed))
+FLOPs: The CPU's FLOPs depend on the specific workload and architecture. Usually sits around 71.44 FLOPs.
+
+AMD Ryzen 7 5800X3D(Luis' PC):
+
+Speed: 3.8 GHz base clock speed (up to 4.6 GHz with Precision Boost(not needed))
+FLOPs: Similar to the Ryzen 5 3600, but the increased L3 cache and clock speeds give this one around 95.26 FLOPs.
+
+
+GPUs:
+
+NVIDIA GTX 1060 Ti(Luke's PC):
+
+FLOPs: Around 3.47 teraFLOPS (FP32)
+Speed: Designed for gaming, it can also handle entry-level deep learning and visual tasks, probably not recommended for this could run into issues along the way.
+
+NVIDIA RTX 3060 Ti(Luis' PC):
+
+FLOPs: Around 16.2 teraFLOPS (FP32)
+Speed: Designed for gaming, it is also quite capable for many deep learning and visual tasks due to its larger VRAM and onboard cache.
+
+
+Example CPU and GPU config:
+
+Intel Xeon Platinum 8280:
+
+Speed: 2.7 GHz base clock speed (up to 4.0 GHz with Turbo Boost)
+
+NVIDIA GeForce RTX 3090:
+
+FLOPs: 35.6 teraFLOPS (FP16), 17.8 teraFLOPS (FP32)
+
+
+
+
+Overall, this narrows down that we should use either Luke's PC or Luis's PC for most of testing. They provide optimal results and are closest to what example modules support and excel with. For the camera, Suprisingly the 
+iphone camera doesn't seem like a bad option, it will just be difficult to work with. Our best bet will still be with the Logitech C920 camera and also the Rasperry Pi. Arduino is just too complicated and not very well supported.
+
+
