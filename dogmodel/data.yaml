@@ -1,0 +1,9 @@
+## Angelina Hobbs 
+
+dir: /content/Drive/MyDrive/yolov8/data
+
+train: /content/yolodata/images/train
+val: /content/yolodata/images/val
+
+nc: 1
+names: ['dog']
