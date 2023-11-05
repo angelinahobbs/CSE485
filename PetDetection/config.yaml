@@ -1,7 +1,0 @@
-
-path: /Users/angelinahobbs/Desktop/school/Fall2023/CSE485/cse485github/CSE485/Sprint2/PetDetection/Dog.v1i.yolov8
-train: train/images
-val: valid/images
-
-names:
-  0: dog
