@@ -1,7 +1,0 @@
-path: C:\Users\lukek\College\Capstone\ChickenDataSet # dataset root
-train: images\train # training images
-val: images\valid # validation images
-
-# set all classes
-names:
-  0: chicken
