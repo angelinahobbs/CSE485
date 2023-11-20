@@ -1,0 +1,16 @@
+Pet Camera Requirements:
+
+Hardware:
+Camera - High resolution with night vision capabilities, continuous video capture
+Connectivity - Ethernet or Wifi connection via Raspberry Pi
+Cloud Storage - Upload videos using cloud services (?)
+
+Software/User Experience:
+Yolov8 Model - Train model and deploy onto a raspberry pi for real-time object analysis. Model should be trained for pet activity including common household pets.
+Notification System - Mobile app that can receive notification using a push notification service (maybe Firebase ?)
+Alert Settings - User can choose what activities to be alerted from & input any health/behavior concerns to watch for. They can choose to receive push notifications. 
+Real time feed - Application allows user to view the pet footage in real-time remotely.
+Stored footage - Application stores footage based on user settings and storage configuration.
+ 
+
+ 
