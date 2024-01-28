@@ -1,12 +1,11 @@
 path: C:\Users\lukek\College\Capstone\Dataset # dataset root
 train: images\train # training images
-val: images\valid # validation images
+val: images\train # validation images
 
 # set all classes
 names:
   0: Bear,
-  1: Chicken,
-  2: Deer,
-  3: Lizard,
-  4: Pig,
-  5: Tiger
+  1: Deer,
+  2: Fox,
+  3: Lynx,
+  4: Rabbit,

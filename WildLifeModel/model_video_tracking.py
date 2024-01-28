@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 # video paths
 # TODO: make this a relative path so its not hard coded everytime
-video_input_path = r"C:\Users\lukek\College\Capstone\Dataset\Videos\BearCatch.mp4"
+video_input_path = r"C:\Users\lukek\College\Capstone\Dataset\Videos\BrownBear.mp4"
 video_output_path = '{}_out.mp4'.format(video_input_path)
 
 # reads videos frame by frame and evaluates them using the model
@@ -15,7 +15,7 @@ H, W, _ = frame.shape
 out = cv2.VideoWriter(video_output_path, cv2.VideoWriter_fourcc(*'MP4V'), int(video_capture.get(cv2.CAP_PROP_FPS)), (W, H))
 
 # change the train number with the most up-to-date model you are testing
-model_path = os.path.join('.', 'runs', 'detect', 'train12', 'weights', 'last.pt')
+model_path = os.path.join('.', 'runs', 'detect', 'train2', 'weights', 'last.pt')
 
 # Load a model
 model = YOLO(model_path)  # load a custom model
