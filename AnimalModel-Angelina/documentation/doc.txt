@@ -1,0 +1,6 @@
+Link to my dataset: https://universe.roboflow.com/cse485/dog-nafnl
+All images can be found on Google's OpenImages
+
+Jupyter notebook used to train model is attached.
+
+Dog model from prior sprint is more accurate and precise than the dog class in this model, so that may be used instead in the final product. Overall success with this model.
