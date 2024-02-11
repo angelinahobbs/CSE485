@@ -1,0 +1,12 @@
+Link to my dataset: https://universe.roboflow.com/cse485/dog-nafnl
+All images can be found on Google's OpenImages
+
+Jupyter notebook used to train model is attached in AnimalModel1-Angelina
+
+Dog model from prior sprint is more accurate and precise than the dog class in this model, so that may be used instead in the final product. 
+
+This model used less epochs and a dataset which definitely needs improvement, so in the next sprint I will be refining this model and merging it with Luke's animal model. 
+
+Information about dataset/classes/animals/etc. can be found in roboflow link above.
+
+
