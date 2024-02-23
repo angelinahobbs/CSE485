@@ -4,7 +4,7 @@ model: yolov8s.pt
 data: /content/drive/MyDrive/yolov8/data.yaml
 epochs: 50
 time: null
-patience: 50
+patience: 100
 batch: 8
 imgsz: 800
 save: true
@@ -13,7 +13,7 @@ cache: false
 device: null
 workers: 8
 project: /content/drive/MyDrive/yolov8/training_results
-name: animals2
+name: animals7
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -102,4 +102,4 @@ erasing: 0.4
 crop_fraction: 1.0
 cfg: null
 tracker: botsort.yaml
-save_dir: /content/drive/MyDrive/yolov8/training_results/animals2
+save_dir: /content/drive/MyDrive/yolov8/training_results/animals7

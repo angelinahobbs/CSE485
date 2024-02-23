@@ -1,0 +1,10 @@
+Find the dataset here: https://universe.roboflow.com/cse485/dog-nafnl
+
+Model was trained in Google Colab using yolov8-training.ipynb notebook and data.yaml file which is uploaded in this folder
+
+In this sprint, I've determined that the skunk class will be eliminated due to a weak dataset.
+
+The animals in this model are:
+'Bat', 'Cat', 'Dog', 'Duck', 'Eagle', 'Horse', 'Owl', 'Person', 'Snake'
+
+
