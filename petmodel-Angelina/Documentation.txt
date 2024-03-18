@@ -1,0 +1,5 @@
+Dataset found here: https://drive.google.com/file/d/1_SpoLSuZNX-kug7aRRYcI7atZyBV7b8y/view?usp=sharing
+
+Script has been updated to unzip the dataset, split between train/test/validation, and complete training of the model. 
+
+Results of this script were great but will be updated to be used on real time video along with a script. Further information can be found in the results.png/results.csv files and other batch images.
