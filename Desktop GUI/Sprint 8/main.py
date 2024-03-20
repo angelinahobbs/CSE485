@@ -1,6 +1,7 @@
 import datetime
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from concurrent.futures import ProcessPoolExecutor, as_completed
 import numpy as np
 from PIL import ImageTk
 from PIL import Image
@@ -37,7 +38,8 @@ right_frame.pack_propagate(False)
 
 # counting animal variables
 animal_counts = {}
-animals = ["BEAR,", "WOLF,", "COYOTE,", "DEER,", "FOX,", "SQUIRREL", "HUMAN", "DOG", "CAT", "SKUNK"]
+animals = ["HUMAN", "DOG", "CAT", "DEER", "DUCK", "EAGLE", "HORSE", "RABBIT", "SNAKE", "FOX", "SQUIRREL", "BEAR",
+           "HEDGEHOG", "LYNX", "MOUSE", "TURTLE"]
 animal_checks = {}
 for animal in animals:
     animal_checks[animal] = tk.IntVar(value=1)  # sets all animals to being tracked
@@ -65,8 +67,8 @@ battery_notif = tk.BooleanVar(value=False)
 cap = None
 
 # Different model paths
-pets_path = 'weights/best.pt'
-wildlife_path = 'WildLifeModel/weights/last.pt'
+pets_path = 'weights/best.onnx'
+wildlife_path = 'WildLifeModel/runs/detect/train10/weights/last.pt'
 current_path = pets_path
 
 # new frame for model controls
@@ -77,15 +79,16 @@ model_switch_frame.pack(side='top', fill='x', pady=25)
 model_label = Label(model_switch_frame, text="Current Model: Pets", bg='black', fg='white')
 model_label.pack(side='top', fill='x')
 
-# YOLO STUFF, creates both models and adds to gpu
+# YOLO STUFF, creates both models and sends to gpu
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 pet_model = YOLO(pets_path)
-pet_model = pet_model.to(device)
+# pet_model = pet_model.to(device)
 wildlife_model = YOLO(wildlife_path)
 wildlife_model = wildlife_model.to(device)
 model = pet_model
-threshold = 0.2
+threshold = 0.6
 
+executor = ProcessPoolExecutor(max_workers=4)
 results = None
 file_path = None
 
@@ -133,7 +136,7 @@ class ToggleSwitch(tk.Frame):
 
 
 # for raspberry pi
-def live_video(img):
+def live_video():
     return
 
 
@@ -149,9 +152,6 @@ def select_video():
         ("MP4 files", "*.mp4"), ("AVI files", "*.avi"), ("All files", "*.*")))
     # if the path exists, set the capture to the new video and begin updating
     if file_path:
-        model = YOLO(current_path)
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        model = model.to(device)
         results = model(file_path, stream=True)
         cap = cv2.VideoCapture(file_path)
         update_video()
@@ -165,6 +165,9 @@ def update_video():
 
     # get next frame and check if it exists
     ret, frame = cap.read()
+    if not ret:
+        return
+
     if ret:
         detections = next(results, None)  # get next set of results
 
@@ -283,9 +286,9 @@ def add_animal(detected_animals):
     # update counts for each detected animal
     for animal in detected_animals:
         if animal in animal_counts:
-            animal_counts[animal]['count'] += 1
+            animal_counts[animal]['count'] = detected_animals[animal]
         else:
-            animal_counts[animal] = {'count': 1, 'times': []}
+            animal_counts[animal] = {'count': detected_animals[animal], 'times': []}
 
     # add timestamp for each animal
     for animal in animal_counts:
@@ -320,6 +323,12 @@ def resume():
     results = model(file_path, stream=True)
     cap = cv2.VideoCapture(file_path)
     root.after(10, update_video)
+
+
+# Make sure to shut down the executor when the application closes
+def on_close():
+    executor.shutdown(wait=True)
+    root.destroy()
 
 
 # upload video button
