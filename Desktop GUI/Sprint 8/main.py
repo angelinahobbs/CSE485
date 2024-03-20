@@ -68,7 +68,7 @@ cap = None
 
 # Different model paths
 pets_path = 'weights/best.onnx'
-wildlife_path = 'WildLifeModel/runs/detect/train10/weights/last.pt'
+wildlife_path = 'WildLifeModel/weights/last.pt'
 current_path = pets_path
 
 # new frame for model controls
